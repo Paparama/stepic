@@ -77,18 +77,20 @@ WSGI_APPLICATION = 'ask.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'qa',
+        'ENGINE': 'django.db.backends.mysql',
         'USER': 'root',
         'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '',
+        'OPTIONS': {
+          'autocommit': True,
+        },
+    }
 }
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     #}
-}
+
 
 
 # Password validation
